@@ -1,3 +1,5 @@
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class Isogram {
     /**
@@ -13,6 +15,28 @@ public class Isogram {
      * @return true if str is an isogram, false otherwise.
      */
     public boolean isIsogram(String str){
-        return false;
+       String str2=str;
+       int count= 0;
+        for(int i=0; i<str.length();i++){
+            char m=str.charAt(i);
+            count= 0;
+            for(int s=1; s<str2.length();s++){
+             
+             System.out.println(str2);
+             if(str2.charAt(s)==m) {
+                
+               count++;
+               if(count==2){
+                
+                return false;
+               }
+             }
+            
+
+            }
+
+        }
+        return true;
     }
 }
+
